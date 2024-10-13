@@ -1,0 +1,8 @@
+Package: count-files
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends:
+Maintainer: Yehor yeros05040504@gmail.com
+Description: A script to count files in /etc directory.
