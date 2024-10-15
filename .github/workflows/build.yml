@@ -19,9 +19,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y rpm build-essential
 
-      - name: Test
+      - name: Test1
         run: |
-          ls
+          ls /rpmbuild
+
+      - name: Test2
+        run: |
+          ls ~/rpmbuild
 
       - name: Build RPM
         run: |
