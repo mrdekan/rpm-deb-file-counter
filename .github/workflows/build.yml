@@ -19,6 +19,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y rpm build-essential
 
+      - name: Test
+        run: |
+          ls
+
       - name: Build RPM
         run: |
           rpmbuild -ba ~/rpmbuild/SPECS/count_files.spec
