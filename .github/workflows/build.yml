@@ -21,7 +21,7 @@ jobs:
 
       - name: Test1
         run: |
-          ls /rpmbuild
+          ls rpmbuild
 
       - name: Test2
         run: |
