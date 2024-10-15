@@ -21,9 +21,10 @@ jobs:
 
       - name: Build RPM
         run: |
-          mkdir ~/rpmbuild/SOURCES/
+          mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
           cp rpmbuild/SOURCES/count_files-1.0.tar.gz ~/rpmbuild/SOURCES/
-          rpmbuild -ba rpmbuild/SPECS/count_files.spec
+          cp rpmbuild/SPECS/count_files.spec ~/rpmbuild/SPECS/
+          rpmbuild -ba ~/rpmbuild/SPECS/count_files.spec
 
       - name: Set up DEB build environment
         run: |
